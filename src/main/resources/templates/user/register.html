@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <script type="text/javascript" th:src="@{/js/jquery-1.11.1.min.js}"></script>
+</head>
+<body>
+    <form action="../user/userRegister" method="post">
+        用户名：<input type="text" id="username" name="username" onblur="checkUserName()"><br>
+        密码：<input type="text" id="password" name="password"><br>
+        <button id="submit">注册</button>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    function checkUserName(){
+        var username = document.getElementById("username").value;
+        if (username === '') {
+            return;
+        }
+        $.ajax({
+            type : "GET",
+            url : "../user/checkUserName",
+            dataType : "json",
+            data : {
+                username : username
+            },
+            success : function (data) {
+                if (data.result === "failure") {
+                    alert("用户名已存在，请重新输入");
+                    $("#username").val("");
+                }
+            }
+        });
+    }
+
+</script>
