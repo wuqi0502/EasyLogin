@@ -14,20 +14,6 @@ public class SharkController {
         return mv;
     }
 
-//    @GetMapping("/login")
-//    public ModelAndView login(){
-//        ModelAndView mv = new ModelAndView();
-//        mv.setViewName("login");
-//        return mv;
-//    }
-//
-//    @GetMapping("/register")
-//    public ModelAndView register(){
-//        ModelAndView mv = new ModelAndView();
-//        mv.setViewName("register");
-//        return mv;
-//    }
-
     @GetMapping("/blog")
     public ModelAndView blog(){
         ModelAndView mv = new ModelAndView();

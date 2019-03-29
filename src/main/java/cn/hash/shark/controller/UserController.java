@@ -14,7 +14,6 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-//@RequestMapping(value = "user")
 public class UserController {
 
     @Autowired
