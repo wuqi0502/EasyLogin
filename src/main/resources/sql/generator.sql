@@ -9,7 +9,7 @@ create table user(
 /*联系信息表*/
 create table message(
    id bigint primary key auto_increment,
-   name varchar(20) unique not null,
+   name varchar(20) not null,
    email varchar(50) not null,
    subject varchar(100) not null,
    content varchar(1000) not null,

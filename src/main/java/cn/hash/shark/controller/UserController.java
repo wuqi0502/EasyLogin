@@ -3,6 +3,8 @@ package cn.hash.shark.controller;
 import cn.hash.shark.pojo.JsonResult;
 import cn.hash.shark.pojo.User;
 import cn.hash.shark.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,6 +17,8 @@ import java.util.Optional;
 
 @RestController
 public class UserController {
+
+    private Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     private UserService userService;
@@ -77,10 +81,12 @@ public class UserController {
         User user = this.userService.getUser(parameters);
         JsonResult jr = new JsonResult();
         if (Optional.ofNullable(user).isPresent()) {
+            logger.debug("success");
             jr.setStatus(JsonResult.SUCCESS);
             jr.setMsg("登录成功！");
             jr.setObject(user);
         } else {
+            logger.debug("failure");
             jr.setStatus(JsonResult.FAILURE);
             jr.setMsg("登录失败！用户名或密码错误！");
             jr.setObject(null);
