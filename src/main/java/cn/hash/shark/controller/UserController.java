@@ -68,7 +68,7 @@ public class UserController {
      * @param response
      * @return
      */
-    @PostMapping(value = "login")
+    @RequestMapping(value = "login", method = RequestMethod.POST)
     @ResponseBody
     public JsonResult login(HttpServletRequest request, HttpServletResponse response){
         Map<String, Object> parameters = new HashMap<>();

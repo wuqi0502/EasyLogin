@@ -70,18 +70,13 @@
 				<!--  Main navigation  -->
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<li><a href="#home">Home</a></li>
-					<li><a href="#about">About</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
 					<li><a href="#service">Services</a></li>
 					<li><a href="#pricing">Prices</a></li>
 					<li><a href="#team">Team</a></li>
-					<li class="has-dropdown"><a href="#blog">Blog</a>
-						<ul class="dropdown">
-							<li><a href="./blog">blog post</a></li>
-						</ul>
-					</li>
+					<li><a href="./blog">Blog</a></li>
 					<li><a href="./toLogin">Login</a></li>
-					<li><a href="./toRegister">Register</a></li>
+					<li><a href="#about">About</a></li>
 				</ul>
 				<!-- /Main navigation -->
 
@@ -869,11 +864,11 @@
 
 				<!-- contact form -->
 				<div class="col-md-8 col-md-offset-2">
-					<form class="contact-form">
-						<input type="text" class="input" placeholder="Name">
-						<input type="email" class="input" placeholder="Email">
-						<input type="text" class="input" placeholder="Subject">
-						<textarea class="input" placeholder="Message"></textarea>
+					<form class="contact-form" action="/message/send" method="post">
+						<input id="name" name="name" type="text" class="input" placeholder="Name" required="required">
+						<input id="email" name="email" type="email" class="input" placeholder="Email" required="required">
+						<input id="subject" name="subject" type="text" class="input" placeholder="Subject" required="required">
+						<textarea id="content" name="content" class="input" placeholder="Content" required="required"></textarea>
 						<button class="main-btn">Send message</button>
 					</form>
 				</div>
@@ -902,7 +897,7 @@
 
 					<!-- footer logo -->
 					<div class="footer-logo">
-						<a href="index.html"><img th:src="@{/img/logo-alt.png}" alt="logo"></a>
+						<a href="./index"><img th:src="@{/img/logo-alt.png}" alt="logo"></a>
 					</div>
 					<!-- /footer logo -->
 
@@ -919,7 +914,7 @@
 
 					<!-- footer copyright -->
 					<div class="footer-copyright">
-						<p>Copyright © 2017. All Rights Reserved. Designed by <a href="#" target="_blank">Colorlib</a> More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+						<p>Copyright © 2019. All Rights Reserved. Designed by <a href="#" target="_blank">HashShark</a> More Sharks <a href="https://github.com/doocs/advanced-java" target="_blank" title="进阶">HashShark</a> - Collect from <a href="https://github.com/doocs/advanced-java" title="进阶" target="_blank">HashShark</a></p>
 					</div>
 					<!-- /footer copyright -->
 
@@ -960,7 +955,5 @@
 
 </html>
 <script type="text/javascript">
-	$(document).ready(function () {
 
-	})
 </script>

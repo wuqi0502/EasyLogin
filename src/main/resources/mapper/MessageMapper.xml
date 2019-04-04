@@ -1,0 +1,23 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cn.hash.shark.mapper.MessageMapper">
+
+    <sql id="message_columns">
+        ID,
+        NAME,
+        EMAIL,
+        SUBJECT,
+        CONTENT,
+        STATUS
+    </sql>
+
+    <insert id="insert">
+      INSERT INTO
+        MESSAGE
+          (ID, NAME, EMAIL, SUBJECT, CONTENT)
+        VALUES
+          (NULL, #{name}, #{email}, #{subject}, #{content})
+    </insert>
+</mapper>
