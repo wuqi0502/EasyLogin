@@ -1,3 +1,6 @@
+/*建库*/
+create database shark0322;
+
 /*用户表*/
 create table user(
    id bigint primary key auto_increment,
