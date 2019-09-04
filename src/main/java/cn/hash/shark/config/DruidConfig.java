@@ -1,4 +1,4 @@
-package cn.hash.shark.pojo;
+package cn.hash.shark.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
