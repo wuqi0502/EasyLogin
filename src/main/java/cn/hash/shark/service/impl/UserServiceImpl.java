@@ -5,9 +5,9 @@ import cn.hash.shark.pojo.User;
 import cn.hash.shark.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Map;
 
 @Service
@@ -15,7 +15,7 @@ public class UserServiceImpl implements UserService {
 
     private Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
-    @Autowired
+    @Resource
     private UserMapper userMapper;
 
     @Override

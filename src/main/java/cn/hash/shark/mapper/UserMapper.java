@@ -2,11 +2,9 @@ package cn.hash.shark.mapper;
 
 import cn.hash.shark.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
 
 import java.util.Map;
 
-@Repository
 @Mapper
 public interface UserMapper {
 

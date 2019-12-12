@@ -1,14 +1,12 @@
 package cn.hash.shark.pojo;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
 
-@Getter
-@Setter
-@ToString
+@Data
+@TableName(value = "message")
 public class Message implements Serializable {
 
     private static final long serialVersionUID = -8217136403950237307L;
